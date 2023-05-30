@@ -8,24 +8,17 @@
     - "initial-scale=1.0" 将网页的初始缩放级别设置为100%。这确保了网页在首次加载时以其原始大小显示。
     - content（目录） device(装置）  initial（初始） scale（改变尺寸大小）-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>首页</title>
+    <title>登录成功</title>
 
     <!--导入Semantic UI 框架，在首尾都需要引入-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
 
     <!--必须引入css代码的位置-->
-    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}" >
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}" >
 </head>
 <body>
 
-    <!--导航部分-->
-    <!--"Nav"是"navigation"的缩写，指的是导航。在网页设计中，导航通常用于帮助用户浏览和访问网站的不同页面和内容。
-    在HTML中，<nav> 元素通常用于标记网页中包含导航链接的部分。
-    因为使用的semantic UI，所以在这里面他有很多现成的组件可以使用
-    "ui"类用于指定该元素属于UI组件的一部分。
-    "inverted"类用于指定该元素的颜色反转，即白色背景和黑色文本。
-    "segment"类用于指定该元素的外观为分段式，即在上下文中被视为单独的块。以使导航菜单具有反色和分段的视觉效果。
-    "attached"是表示依附的意思，使他没有圆角-->
+
     <nav class="ui inverted attached segment m-padded-tb-mini">
 
         <!--"container" 类用于指定该元素为容器，它将具有固定的最大宽度，并在中央对齐。
@@ -64,92 +57,16 @@
         </div>
     </nav>
 
-    <!--中间内容-->
-    <!--div定义html里面的一个分区或者块-->
-
-    <!--"attached" 类用于指定该元素与其上面或下面的元素相连，并共享相同的边框。
-    "vertical segment" 类用于指定该元素为垂直方向的段落，并提供适当的上下边距。-->
     <div class="m-container-small m-padded-tb-big">
         <div class="ui container">
-            <form action="#" method="post" class="ui segment form">
-                <div class="inline fields">
-                    <div class="field">
-                        <input type="text" name="title" placeholder="标题">
-                    </div>
-                    <div class="field">
-                        <select class="ui fluid search dropdown" multiple="">
-                            <option value="">类型</option>
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <div class="ui checkbox">
-                            <input type="checkbox" id="recommend" name="recommend">
-                            <label for="recommend">推荐</label>
-                        </div>
-                    </div>
-                    <div class="ui  item">
-                        <div class="field">
-                            <button class="ui mini teal basic button"><i class="ui search icon"></i>搜索</button>
-                        </div>
-                    </div>
+           <div class="ui success large message ">
+               <h3>Hi,</h3>
+               <p>BigFish，欢迎登录</p>
+           </div>
+            <img src="https://unsplash.it/1000/400?image=4" alt="" class="ui rounded bordered fluid image">
 
-                </div>
-            </form>
-
-            <table class="ui center aligned  table">
-                <!--表头-->
-                <thead>
-                <tr>
-                    <th></th>
-                    <th>标题</th>
-                    <th>类型</th>
-                    <th>推荐</th>
-                    <th>更新时间</th>
-                    <th>操作</th>
-                </tr>
-                </thead>
-                <!--数据-->
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>练习IT的方式</td>
-                    <td>认知升级</td>
-                    <td>是</td>
-                    <td>2023-04-30</td>
-                    <td>
-                        <a class="ui mini teal basic button">编辑</a>
-                        <a class="ui mini red basic button">删除</a>
-                    </td>
-                </tr>
-                </tbody>
-                <!--按钮-->
-                <tfoot>
-                <tr>
-                    <th colspan="6">
-                        <a href="#" class="ui mini left floated basic button">新增</a>
-                        <div class="ui right floated pagination menu">
-                            <a class="icon item">
-                                <i class="left chevron icon"></i>
-                            </a>
-                            <a class="item">1</a>
-                            <a class="item">2</a>
-                            <a class="item">3</a>
-                            <a class="item">4</a>
-                            <a class="icon item">
-                                <i class="right chevron icon"></i>
-                            </a>
-                        </div>
-                    </th>
-                </tr>
-                </tfoot>
-            </table>
         </div>
     </div>
-
     <!--底部内容-->
     <!--footer代表底部的的意思，都是实现分块，但是名字不同增加代码的可读性-->
     <!--"vertical segment" 类用于指定该元素为垂直方向的段落，并提供适当的上下边距。-->
@@ -162,7 +79,7 @@
             <!--grid:网格布局，一共16份 three wide column 代表这一块占三份-->
             <div class="ui inverted divided grid">
                 <div class="three wide column">
-                    <img src="../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui rounded images" alt="" style="width: 120px">
+                    <img src="../../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui rounded images" alt="" style="width: 120px">
                 </div>
                 <div class="four wide column">
                     <div class="ui inverted link list">
