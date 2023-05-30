@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <!--meta 原标签-->
+
+    <!-- - "content=device-width" 将视口的宽度设置为正在查看网页的设备的宽度。这意味着网页将根据设备的宽度调整其布局，而不是使用固定宽度。
+    - "initial-scale=1.0" 将网页的初始缩放级别设置为100%。这确保了网页在首次加载时以其原始大小显示。
+    - content（目录） device(装置）  initial（初始） scale（改变尺寸大小）-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>登录成功</title>
+
+    <!--导入Semantic UI 框架，在首尾都需要引入-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+
+    <!--必须引入css代码的位置-->
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}" >
+</head>
+<body>
+
+
+    <nav class="ui inverted attached segment m-padded-tb-mini">
+
+        <!--"container" 类用于指定该元素为容器，它将具有固定的最大宽度，并在中央对齐。
+        通过在 <div> 元素中使用这些类， 可以轻松地创建具有居中对齐和固定宽度的容器，并使用CSS进行进一步的样式设置。-->
+        <div class="ui container">
+
+            <!--"secondary" 类用于指定该元素为次要的导航菜单，通常用于显示不那么重要的链接和菜单项。
+                stackable:可堆叠的意思，屏幕小了会自动堆叠-->
+            <div class="ui inverted secondary stackable menu">
+
+                <!--header是指定该元素为标题，teal是颜色
+                "item" 类通常用于指定该元素为可交互的列表项或卡片，可以响应用户的点击事件或鼠标悬停事件。
+                通过在 <h2> 元素中使用 "item" 类，可以将标题 "MyBlog" 作为一个单独的列表项或卡片显示，并提供与之交互的功能和操作。
+                例如，可以在标题上添加链接，使用户可以单击标题以转到网站的主页或其他相关页面。-->
+                <h2 class="ui teal header item">管理后台</h2>
+                <a href="#" class="item"><i class="home icon"></i> MyBlog</a>
+                <a href="#" class="item"><i class="idea icon"></i> 分类</a>
+                <a href="#" class="item"><i class="tags icon"></i> 标签</a>
+
+                <div class="right dropdown menu">
+                    <!--transparent：透明的-->
+                    <div class="ui inline dropdown item">
+                        <div class="text">
+                            <img class="ui avatar image" src="../web/images/1.jpg" alt="">
+                            BigFish
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item">
+                                <a href="#" class="ui item">注销</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="m-container-small m-padded-tb-big">
+        <div class="ui container">
+           <div class="ui success large message ">
+               <h3>Hi,</h3>
+               <p>BigFish，欢迎登录</p>
+           </div>
+            <img src="https://unsplash.it/1000/400?image=4" alt="" class="ui rounded bordered fluid image">
+
+        </div>
+    </div>
+    <!--底部内容-->
+    <!--footer代表底部的的意思，都是实现分块，但是名字不同增加代码的可读性-->
+    <!--"vertical segment" 类用于指定该元素为垂直方向的段落，并提供适当的上下边距。-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+
+        <!--"center aligned" 类用于指定该元素在水平方向上居中对齐。
+        "container" 类用于指定该元素为一个容器，具有最大宽度并在页面中居中-->
+        <div class="ui center aligned container">
+
+            <!--grid:网格布局，一共16份 three wide column 代表这一块占三份-->
+            <div class="ui inverted divided grid">
+                <div class="three wide column">
+                    <img src="../static/images/WeChat.jpg" th:src="@{/images/WeChat.jpg}" class="ui rounded images" alt="" style="width: 120px">
+                </div>
+                <div class="four wide column">
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted header m-opacity-mini">最新博客</h4>
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">最新的技术</a>
+                        <a href="#" class="item">关于IT的趋势</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted header m-opacity-mini">联系作者</h4>
+                        <a href="#" class="item">姓名：BigFish</a>
+                        <a href="#" class="item">邮箱：bigfish.alert@gmail.com</a>
+                        <a href="#" class="item">地址：日本 东京</a>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted header m-opacity-mini">心情</h4>
+                        <a class="item">生活不止眼前的苟且，还有诗和远方。</a>
+                    </div>
+                </div>
+            </div>
+            <!--分割线-->
+            <!--section" 类用于指定该元素为UI中的一个部分或区域。 "divider" 类用于指定该元素为分割线或分隔符。-->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-mini">Paragraphs are usually represented in visual media as blocks of text </p>
+        </div>
+    </footer>
+
+<!--引入jquery的链接-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
+
+<!--导入Semantic UI 框架，在首尾都需要引入-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+
+<script>
+    $('.ui.dropdown')
+        .dropdown()
+    ;
+</script>
+
+</body>
+</html>

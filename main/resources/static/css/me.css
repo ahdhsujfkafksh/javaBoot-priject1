@@ -1,0 +1,106 @@
+/*定义container上下的宽度,从大到小*/
+/*具体来说， "padding-top" 和 "padding-bottom" 属性分别设置了元素的上内边距和下内边距为0.2em。
+这些属性可以用于控制元素的大小和排列，例如在垂直方向上增加或减少元素之间的间距。
+"!important" 标记指定了该属性值具有最高优先级，将覆盖任何其他样式或属性设置。这通常用于解决样式冲突或优先级问题。*/
+.m-padded-tb-mini{
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+
+.m-padded-small{
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.m-padded-tb{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.m-padded-tb-large{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+
+.m-padded-tb-big{
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+
+.m-padded-tb-huge{
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+/*定义最下面的上下宽度*/
+.m-padded-tb-massive{
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+.m-padded-lr{
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+
+/*------对外部的间距-------*/
+
+
+.m-margin-small{
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+    margin-right: 0.5em !important;
+
+}
+.m-margin-tb{
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+/*-----text------*/
+
+/*".m-text-thin" 类设置元素的字体粗细为300，这通常用于创建更轻的文本样式。*/
+.m-text-thin{
+    font-weight: 300 !important;
+}
+/*".m-text-spaced" 类设置元素的字母间距为1像素，这通常用于创建具有间隔感的文本样式。*/
+.m-text-spaced{
+    letter-spacing: 1px !important;
+}
+/*".m-text-lined" 类设置元素的行高为1.8倍字体高度，这通常用于创建更宽松的行距和更易于阅读的文本样式。*/
+.m-text-lined{
+    line-height: 1.8 !important;
+}
+
+
+/*-----opacity：透明度----*/
+.m-opacity-mini{
+    opacity: 0.8 !important;
+}
+
+
+
+/*-------display-------*/
+
+/*不换行*/
+.m-inline-block{
+    display: inline-block !important;
+}
+/*居中*/
+
+.m-container-mini {
+    max-width: 30em !important;
+    margin: auto !important;
+}
+.m-container-small{
+    max-width: 60em !important;
+    margin: auto !important;
+}
+.m-container{
+    max-width: 72em !important;
+    margin: auto !important;
+}
+
+
+/*------定义颜色--------*/
+.m-black{
+    color: black !important;
+}

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+        <!--meta 原标签-->
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>MyBlog分类</title>
+
+    <!--导入Semantic UI 框架，在首尾都需要引入-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+
+    <!--必须引入css代码的位置-->
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}" >
+</head>
+<body>
+
+
+    <nav class="ui inverted attached segment m-padded-tb-mini">
+
+        <div class="ui container">
+
+
+            <div class="ui inverted secondary stackable menu">
+
+                <!--header是指定该元素为标题，teal是颜色
+                "item" 类通常用于指定该元素为可交互的列表项或卡片，可以响应用户的点击事件或鼠标悬停事件。
+                通过在 <h2> 元素中使用 "item" 类，可以将标题 "MyBlog" 作为一个单独的列表项或卡片显示，并提供与之交互的功能和操作。
+                例如，可以在标题上添加链接，使用户可以单击标题以转到网站的主页或其他相关页面。-->
+                <h2 class="ui teal header item">MyBlog</h2>
+                <a href="#" class="item"><i class="home icon"></i> 首页</a>
+                <a href="#" class="item"><i class="idea icon"></i> 分类</a>
+                <a href="#" class="item"><i class="tags icon"></i> 标签</a>
+                <a href="#" class="item"><i class="clone icon"></i> 归档</a>
+                <a href="#" class="item"><i class="info icon"></i> 关于我</a>
+
+                <!--搜索框-->
+                <div class="right item">
+                    <!--transparent：透明的-->
+                    <div class="ui icon inverted transparent input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--中间内容-->
+    <!--div定义html里面的一个分区或者块-->
+
+    <!--"attached" 类用于指定该元素与其上面或下面的元素相连，并共享相同的边框。
+    "vertical segment" 类用于指定该元素为垂直方向的段落，并提供适当的上下边距。-->
+    <div class="m-container-small m-padded-tb">
+        <div class="ui container">
+            <!--header-->
+            <div class="ui top attached segment">
+                <div class="ui middle aligned two column grid">
+                    <div class="column">
+                        <h3 class="ui teal header">分类</h3>
+                    </div>
+                    <div class="right aligned column">
+                        共<h2 class="ui orange header m-inline-block m-text-thin">14</h2>个
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui attached segment">
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+                <div class="ui labeled button m-margin-tb">
+                    <a href="#" class="ui basic teal button">思考与感悟</a>
+                    <div class="ui basic teal left pointing label">24</div>
+                </div>
+            </div>
+
+            <div class="ui segment">
+                <div class="ui grid">
+                    <div class="eleven wide column">
+                        <a href="#" class="ui header">Chat-GPT简介</a>
+                        <div class="ui inverted selected divider"></div>
+                        <p>Chat-GPT是一种基于GPT-3.5架构的大型语言模型，由OpenAI开发。它使用深度学习技术，通过大量的自然语言语料库进行训练，以便可以生成逼真的自然语言响应。
+                            Chat-GPT的主要应用是在自然语言处理领域，它可以用于各种任务，例如问答、文本生成、自动翻译、文本分类等。</p>
+
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui horizontal link list">
+                                    <div class="item">
+                                        <!--&lt;!&ndash;avatar:圆形小图片  springboot需要引用绝对路径-->
+                                        <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="#" class="ui avatar image">
+                                        <div class="content">
+                                            <a href="#" class="header">BigFish</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="calendar icon"></i>2023-04-30
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2002
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right aligned four wide column">
+                                <a href="#" target="_blank" class="ui teal basic label">行业信息</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="five wide column">
+                        <div class="ui center aligned container">
+                            <a href="" target=_blank>
+                                <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="" class="ui rounded" style="width: 150px; height: 150px" >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <div class="ui grid">
+                    <div class="eleven wide column">
+                        <a href="#" class="ui header">Chat-GPT简介</a>
+                        <div class="ui inverted selected divider"></div>
+                        <p>Chat-GPT是一种基于GPT-3.5架构的大型语言模型，由OpenAI开发。它使用深度学习技术，通过大量的自然语言语料库进行训练，以便可以生成逼真的自然语言响应。
+                            Chat-GPT的主要应用是在自然语言处理领域，它可以用于各种任务，例如问答、文本生成、自动翻译、文本分类等。</p>
+
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui horizontal link list">
+                                    <div class="item">
+                                        <!--&lt;!&ndash;avatar:圆形小图片  springboot需要引用绝对路径-->
+                                        <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="#" class="ui avatar image">
+                                        <div class="content">
+                                            <a href="#" class="header">BigFish</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="calendar icon"></i>2023-04-30
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2002
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right aligned four wide column">
+                                <a href="#" target="_blank" class="ui teal basic label">行业信息</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="five wide column">
+                        <div class="ui center aligned container">
+                            <a href="" target=_blank>
+                                <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="" class="ui rounded" style="width: 150px; height: 150px" >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <div class="ui grid">
+                    <div class="eleven wide column">
+                        <a href="#" class="ui header">Chat-GPT简介</a>
+                        <div class="ui inverted selected divider"></div>
+                        <p>Chat-GPT是一种基于GPT-3.5架构的大型语言模型，由OpenAI开发。它使用深度学习技术，通过大量的自然语言语料库进行训练，以便可以生成逼真的自然语言响应。
+                            Chat-GPT的主要应用是在自然语言处理领域，它可以用于各种任务，例如问答、文本生成、自动翻译、文本分类等。</p>
+
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui horizontal link list">
+                                    <div class="item">
+                                        <!--&lt;!&ndash;avatar:圆形小图片  springboot需要引用绝对路径-->
+                                        <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="#" class="ui avatar image">
+                                        <div class="content">
+                                            <a href="#" class="header">BigFish</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="calendar icon"></i>2023-04-30
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2002
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right aligned four wide column">
+                                <a href="#" target="_blank" class="ui teal basic label">行业信息</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="five wide column">
+                        <div class="ui center aligned container">
+                            <a href="" target=_blank>
+                                <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="" class="ui rounded" style="width: 150px; height: 150px" >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <div class="ui grid">
+                    <div class="eleven wide column">
+                        <a href="#" class="ui header">Chat-GPT简介</a>
+                        <div class="ui inverted selected divider"></div>
+                        <p>Chat-GPT是一种基于GPT-3.5架构的大型语言模型，由OpenAI开发。它使用深度学习技术，通过大量的自然语言语料库进行训练，以便可以生成逼真的自然语言响应。
+                            Chat-GPT的主要应用是在自然语言处理领域，它可以用于各种任务，例如问答、文本生成、自动翻译、文本分类等。</p>
+
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui horizontal link list">
+                                    <div class="item">
+                                        <!--&lt;!&ndash;avatar:圆形小图片  springboot需要引用绝对路径-->
+                                        <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="#" class="ui avatar image">
+                                        <div class="content">
+                                            <a href="#" class="header">BigFish</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="calendar icon"></i>2023-04-30
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2002
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right aligned four wide column">
+                                <a href="#" target="_blank" class="ui teal basic label">行业信息</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="five wide column">
+                        <div class="ui center aligned container">
+                            <a href="" target=_blank>
+                                <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="" class="ui rounded" style="width: 150px; height: 150px" >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <div class="ui grid">
+                    <div class="eleven wide column">
+                        <a href="#" class="ui header">Chat-GPT简介</a>
+                        <div class="ui inverted selected divider"></div>
+                        <p>Chat-GPT是一种基于GPT-3.5架构的大型语言模型，由OpenAI开发。它使用深度学习技术，通过大量的自然语言语料库进行训练，以便可以生成逼真的自然语言响应。
+                            Chat-GPT的主要应用是在自然语言处理领域，它可以用于各种任务，例如问答、文本生成、自动翻译、文本分类等。</p>
+
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui horizontal link list">
+                                    <div class="item">
+                                        <!--&lt;!&ndash;avatar:圆形小图片  springboot需要引用绝对路径-->
+                                        <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="#" class="ui avatar image">
+                                        <div class="content">
+                                            <a href="#" class="header">BigFish</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="calendar icon"></i>2023-04-30
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2002
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right aligned four wide column">
+                                <a href="#" target="_blank" class="ui teal basic label">行业信息</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="five wide column">
+                        <div class="ui center aligned container">
+                            <a href="" target=_blank>
+                                <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="" class="ui rounded" style="width: 150px; height: 150px" >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui attached segment">
+                <div class="ui grid">
+                    <div class="eleven wide column">
+                        <a href="#" class="ui header">Chat-GPT简介</a>
+                        <div class="ui inverted selected divider"></div>
+                        <p>Chat-GPT是一种基于GPT-3.5架构的大型语言模型，由OpenAI开发。它使用深度学习技术，通过大量的自然语言语料库进行训练，以便可以生成逼真的自然语言响应。
+                            Chat-GPT的主要应用是在自然语言处理领域，它可以用于各种任务，例如问答、文本生成、自动翻译、文本分类等。</p>
+
+                        <div class="ui stackable grid">
+                            <div class="eleven wide column">
+                                <div class="ui horizontal link list">
+                                    <div class="item">
+                                        <!--&lt;!&ndash;avatar:圆形小图片  springboot需要引用绝对路径-->
+                                        <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="#" class="ui avatar image">
+                                        <div class="content">
+                                            <a href="#" class="header">BigFish</a>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="calendar icon"></i>2023-04-30
+                                    </div>
+                                    <div class="item">
+                                        <i class="eye icon"></i> 2002
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right aligned four wide column">
+                                <a href="#" target="_blank" class="ui teal basic label">行业信息</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="five wide column">
+                        <div class="ui center aligned container">
+                            <a href="" target=_blank>
+                                <img src="../static/images/2.jpg" th:src="@{/images/2.jpg}" alt="" class="ui rounded" style="width: 150px; height: 150px" >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--footer-->
+            <div class="ui bottom attached segment">
+                <div class="ui middle aligned two column grid">
+                    <div class="ui left aligned column">
+                        <a href="#" class="ui mini teal basic button">上一页</a>
+                    </div>
+                    <div class="ui right aligned column">
+                        <a href="#" class="ui mini teal basic button">下一页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--底部内容-->
+    <!--footer代表底部的的意思，都是实现分块，但是名字不同增加代码的可读性-->
+    <!--"vertical segment" 类用于指定该元素为垂直方向的段落，并提供适当的上下边距。-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+
+        <!--"center aligned" 类用于指定该元素在水平方向上居中对齐。
+        "container" 类用于指定该元素为一个容器，具有最大宽度并在页面中居中-->
+        <div class="ui center aligned container">
+
+            <!--grid:网格布局，一共16份 three wide column 代表这一块占三份-->
+            <div class="ui inverted divided grid">
+                <div class="three wide column">
+                    <img src="../static/images/WeChat.jpg"  th:src="@{/images/WeChat.jpg}" class="ui rounded images" alt="" style="width: 120px">
+                </div>
+                <div class="four wide column">
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted header m-opacity-mini">最新博客</h4>
+                        <a href="#" class="item">用户故事</a>
+                        <a href="#" class="item">最新的技术</a>
+                        <a href="#" class="item">关于IT的趋势</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted header m-opacity-mini">联系作者</h4>
+                        <a href="#" class="item">姓名：BigFish</a>
+                        <a href="#" class="item">邮箱：bigfish.alert@gmail.com</a>
+                        <a href="#" class="item">地址：日本 东京</a>
+                    </div>
+                </div>
+                <div class="five wide column">
+                    <div class="ui inverted link list">
+                        <h4 class="ui inverted header m-opacity-mini">心情</h4>
+                        <a class="item">生活不止眼前的苟且，还有诗和远方。</a>
+                    </div>
+                </div>
+            </div>
+            <!--分割线-->
+            <!--section" 类用于指定该元素为UI中的一个部分或区域。 "divider" 类用于指定该元素为分割线或分隔符。-->
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-mini">Paragraphs are usually represented in visual media as blocks of text </p>
+        </div>
+    </footer>
+
+<!--引入jquery的链接-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
+
+<!--导入Semantic UI 框架，在首尾都需要引入-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+</body>
+</html>
+
+<!--
+item 类名用于表示一个独立的元素或组件，例如列表中的一个项，一个卡片，或一个消息气泡等。
+container 类名通常用于表示一个容器元素，即包含其他元素的父元素。例如，一个网页的主体内容可能会被包含在一个 container 元素中，以便于对整个主体进行样式化或布局。
+segment 类名通常用于表示一个页面或组件的分段或区块，例如一个主页的头部、主体和底部可以分别使用 segment 来表示。segment 也可以在布局上起到分隔线的作用，帮助区分不同的内容区块。-->
+
+<!--
+"middle aligned" 表示垂直居中对齐，即将元素在垂直方向上置于容器中心。这可以通过设置元素的 "vertical-align: middle" 样式来实现，通常用于表格、列表、图像等元素的对齐。
+"centered aligned" 表示水平居中对齐，即将元素在水平方向上置于容器中心。这可以通过设置元素的 "text-align: center" 样式来实现，通常用于文本、按钮、图形等元素的对齐。-->
+
+
+<!--
+"Right floated"指的是将元素定位在其容器的右侧，并允许任何其他元素在其左侧流动。这通常使用CSS的float属性实现。
+"Right aligned"指的是将元素的内容对齐到其容器的右侧。这可以使用CSS的text-align属性实现。
+因此，虽然两者都涉及将内容定位或对齐到容器的右侧，-->
