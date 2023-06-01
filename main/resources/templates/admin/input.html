@@ -12,7 +12,7 @@
 
     <!--导入Semantic UI 框架，在首尾都需要引入-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
-
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
     <!--必须引入css代码的位置-->
     <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}" >
 </head>
@@ -76,7 +76,10 @@
             </div>
 
             <div class="required field">
-                <textarea placeholder="博客内容" name="content"></textarea>
+                <div id="md-content" style="z-index: 1 !important;">
+                <textarea placeholder="博客内容" name="content" style="display: none">
+                </textarea>
+                </div>
             </div>
 
             <div class="two fields">
@@ -200,8 +203,28 @@
 
 <!--导入Semantic UI 框架，在首尾都需要引入-->
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
-
+<script src="../../static/lib/editormd/editormd.amd.min.js"  ></script>
 <script>
+    // 初始化编辑
+    var contentEditor;
+    $(function() {
+        contentEditor = editormd("md-content", {
+            width   : "100%",
+            height  : 640,
+            syncScrolling : "single",
+            path    : "../../static/lib/editormd/lib/"
+        });
+
+        /*
+        // or
+        testEditor = editormd({
+            id      : "test-editormd",
+            width   : "90%",
+            height  : 640,
+            path    : "../lib/"
+        });
+        */
+    });
     $('.ui.dropdown')
         .dropdown()
     ;
