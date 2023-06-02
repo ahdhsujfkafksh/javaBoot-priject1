@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class IndexController {
 
-    @GetMapping("/{id}/{name}/")
+    @GetMapping("/{id}/{name}")
     public String index(@PathVariable Integer id,@PathVariable String name){
 
         System.out.println("--------index-------");
